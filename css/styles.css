@@ -289,7 +289,6 @@ ul {
 }
 .team-header {
     color: var(--header-color);
-    font-family: 'Roboto';
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
@@ -457,6 +456,7 @@ footer .address-list-item {
     display: inline-block;
     left: 516px;
     width: 206px;
+    margin-right: 93px;
 }
 .social-media-text {
     font-style: normal;
@@ -479,13 +479,66 @@ footer .address-list-item {
     margin-left: auto;
 }
 .mailing-text {
-    font-family: 'Roboto';
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--header-color-bg);
     padding-bottom: 20px;
+}
+.mailing-form {
+    display: flex;
+}
+.mailing-input {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    color: var(--header-color-bg);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-right: 12px;
+    padding: 15px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mailing-btn {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background: var(--hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mailing-btn:hover,
+.mailing-btn:focus {
+    background-color: var(--hover-button);
+}
+.mailing-btn-text {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--header-color-bg);
+    margin-right: 10px;
+}
+.mailing-btn-icon {
+    height: 24px;
+    width: 24px;
+    fill: var(--header-color-bg);
 }
 .backdrop {
     position: fixed;
@@ -507,6 +560,7 @@ footer .address-list-item {
 .modal {
     z-index: 100;
     position: absolute;
+    padding: 40px;
     top: 50%;
     left: 50%;
     width: 528px;
@@ -530,7 +584,155 @@ footer .address-list-item {
     cursor: pointer;
     margin: 8px;
     padding: 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-close .close-svg {
+    fill: currentColor;
+}
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--hover-button);
+}
+.modal-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--header-color);
+    margin-bottom: 12px;
+}
+.modal-input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    color: var(--text-color);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    padding: 12px 15px 12px 42px;
+}
+.modal-item:not(:last-child) {
+    position: relative;
+    margin-bottom: 10px;
+}
+.modal-icon {
+    top: 55%;
+    left: 12px;
+    position: absolute;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #212121;
+}
+.modal-label-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+    padding-bottom: 4px;
+    display: block;
+}
+.modal-com {
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    color: var(--text-color);
+    background-color: transparent;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-com::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+.modal-input:focus,
+.modal-com:focus {
+    outline: transparent;
+    border-color: var(--hover-color);
+}
+.modal-input:focus +.modal-icon {
+    fill: var(--hover-color);
+}
+.visually-hidden {
+    visibility: hidden;
+}
+.visually-hidden:focus +.modal-icon {
+    fill: var(--hover-color);
+}
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.checkbox-text {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+}
+.modal-check:checked+.form-icon-check {
+    border-color: var(--hover-color);
+    background-color: var(--hover-color);
+}
+.form-icon-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 1px solid var(--logo-color);
+    border-radius: 2px;
+    background-color: var(--header-color-bg);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-link {
+    text-decoration-line: underline;
+    color: var(--hover-color);
+}
+.icon-check {
+    fill: var(--header-color-bg);
+    left: 37%;
+    top: 65.23%;
+}
+.btn-checkbox {
+    width: 200px;
+    height: 50px;
+    margin: 0 124px;
+    background: var(--hover-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-checkbox:hover {
+    background-color: var(--hover-color);
+}
+.check-btn-text {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: var(--header-color-bg);
+}
+
 .main-portfolio {
     padding-top: 94px;
     padding-bottom: 94px;
