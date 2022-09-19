@@ -58,7 +58,7 @@
         </section>
         <section class="features">
             <div class="container">
-            <h2 class="header-invisible">Наші особливості</h2>
+            <h2 class="visually-hidden">Наші особливості</h2>
                 <ul class="features-list">
                     <li class="features-item">
                         <div class="icon-container">
@@ -392,7 +392,7 @@
                         <label class="mailing-label">
                             <input type="email" name="user-mail" placeholder="E-mail" class="mailing-input">
                         </label>
-                        <button type="button" class="mailing-btn">
+                        <button type="submit" class="mailing-btn">
                             <span class="mailing-btn-text">
                                 Підписатися
                             </span>
@@ -412,8 +412,8 @@
                     </svg>
                 </button>
                 <p class="modal-text">Залиште свої дані, ми вам передзвонимо</p>
-                <ul class="modal-list">
-                    <li class="modal-item">
+                <form class="modal-list">
+                    <div class="modal-item">
                     <label class="modal-label">
                         <span class="modal-label-text">Ім'я</span>
                         <input type="text" class="modal-input" name="user-name">
@@ -421,8 +421,8 @@
                             <use href="./images/icons.svg#icon-modal-person"></use>
                         </svg>
                     </label>
-                    </li>
-                    <li class="modal-item">
+                </div>
+                    <div class="modal-item">
                         <label class="modal-label">
                             <span class="modal-label-text">Телефон</span>
                             <input type="tel" class="modal-input" name="user-phone">
@@ -430,8 +430,8 @@
                                 <use href="./images/icons.svg#icon-modal-phone"></use>
                             </svg>
                         </label>
-                    </li>
-                    <li class="modal-item">
+                    </div>
+                    <div class="modal-item">
                         <label class="modal-label">
                             <span class="modal-label-text">Пошта</span>
                             <input type="email" class="modal-input" name="user-email">
@@ -439,14 +439,14 @@
                                 <use href="./images/icons.svg#icon-modal-mail"></use>
                             </svg>
                         </label>
-                    </li>
-                    <li class="modal-item">
+                    </div>
+                    <div class="modal-item">
                         <label class="modal-label">
                             <span class="modal-label-text">Коментар</span>
                             <textarea class="modal-com" placeholder="Введіть текст" name="comments" cols="30" rows="10"></textarea>
                         </label>
-                    </li>
-                    </ul>
+                    </div>
+                </form>
                     <div class="checkbox">
                         <label class="checkbox-label">
                             <input type="checkbox" name="checkbox" class="modal-check visually-hidden">
