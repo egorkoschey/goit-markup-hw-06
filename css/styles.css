@@ -483,7 +483,7 @@ footer .address-list-item {
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--header-color-bg);
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 .mailing-form {
     display: flex;
@@ -662,9 +662,6 @@ footer .address-list-item {
 .modal-input:focus +.modal-icon {
     fill: var(--hover-color);
 }
-.visually-hidden {
-    visibility: hidden;
-}
 .visually-hidden:focus +.modal-icon {
     fill: var(--hover-color);
 }
@@ -704,8 +701,9 @@ footer .address-list-item {
 }
 .icon-check {
     fill: var(--header-color-bg);
-    left: 37%;
-    top: 65.23%;
+    width: 16px;
+    height: 15px;
+    
 }
 .checkbox {
     margin-top: 20px;
@@ -721,7 +719,8 @@ footer .address-list-item {
     cursor: pointer;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-checkbox:hover {
+.btn-checkbox:hover,
+.btn-checkbox:focus {
     background-color: var(--hover-color);
 }
 .check-btn-text {
